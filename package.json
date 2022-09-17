@@ -5,8 +5,10 @@
   "directories": {
     "doc": "docs"
   },
+  "source": "index.html",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "dev": "parcel"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "license": "UNLICENSED",
   "homepage": "https://github.com/monsieurluge/vortex-core-layout-editor#readme",
   "devDependencies": {
-    "cypress": "^10.8.0"
+    "cypress": "^10.8.0",
+    "parcel": "^2.7.0"
   }
 }
