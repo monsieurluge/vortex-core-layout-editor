@@ -1,0 +1,24 @@
+{
+  "name": "vortex-core-layout-editor",
+  "version": "1.0.0",
+  "description": "Vortex CORE Keyboard Layout Editor",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monsieurluge/vortex-core-layout-editor.git"
+  },
+  "keywords": [
+    "keyboard",
+    "layout",
+    "editor",
+    "vortex",
+    "core"
+  ],
+  "author": "monsieurluge",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/monsieurluge/vortex-core-layout-editor#readme"
+}
