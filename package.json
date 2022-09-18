@@ -8,7 +8,7 @@
   "source": "index.html",
   "scripts": {
     "cypress:open": "cypress open",
-    "dev": "parcel"
+    "dev": "parcel --port 1234"
   },
   "repository": {
     "type": "git",

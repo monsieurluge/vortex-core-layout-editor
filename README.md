@@ -11,6 +11,7 @@ My intent is to do some refactoring, upgrade the sources, move to the latest ver
 - [ ] setup the testing environment
     - [x] install Cypress
     - [x] install Parcel
+    - [x] e2e test: main page content
     - [ ] e2e test: save the default layout as json
     - [ ] e2e test: export the default layout as binary
 - [ ] implement the [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) coding workflow
