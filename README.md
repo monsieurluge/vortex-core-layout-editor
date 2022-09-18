@@ -31,8 +31,13 @@ npm run test:e2e
     - [x] automation
     - [ ] e2e test: save the default layout as json
     - [ ] e2e test: export the default layout as binary
+- [ ] CI and git hooks
 - [ ] implement the [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) coding workflow
 - [ ] reduce the _js/muchpc.js_ file complexity
     - [ ] move the constants to dedicated files
     - [ ] move the methods to dedicated files
-- [ ] :construction: next...
+- [ ] unit test - json generation
+- [ ] unit test - binary generation
+- [ ] formating
+    - [ ] eslint
+    - [ ] typescript
