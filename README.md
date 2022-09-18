@@ -4,6 +4,22 @@ This project is a fork of [TsFreddie Much Programming Core project](https://gith
 
 My intent is to do some refactoring, upgrade the sources, move to the latest version of the [VueJS Framework](https://vuejs.org/), add tests, and a decent development environment.
 
+# Installation
+
+```sh
+npm ci
+```
+
+# End to End Testing
+
+The project uses Parcel and Cypress to run the e2e tests suite.
+
+This script runs the project with Parcel on **port 1235**, and let Cypress do its job:
+
+```sh
+npm run test:e2e
+```
+
 # Short Term Roadmap
 
 - [x] documentation cleaning
@@ -12,6 +28,7 @@ My intent is to do some refactoring, upgrade the sources, move to the latest ver
     - [x] install Cypress
     - [x] install Parcel
     - [x] e2e test: main page content
+    - [x] automation
     - [ ] e2e test: save the default layout as json
     - [ ] e2e test: export the default layout as binary
 - [ ] implement the [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) coding workflow

@@ -8,7 +8,8 @@
   "source": "index.html",
   "scripts": {
     "cypress:open": "cypress open",
-    "dev": "parcel --port 1234"
+    "dev": "parcel --port 1234",
+    "test:e2e": "start-server-and-test 'parcel --port 1235' http://localhost:1235 'cypress run --e2e'"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/monsieurluge/vortex-core-layout-editor#readme",
   "devDependencies": {
     "cypress": "^10.8.0",
-    "parcel": "^2.7.0"
+    "parcel": "^2.7.0",
+    "start-server-and-test": "^1.14.0"
   }
 }
