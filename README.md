@@ -29,7 +29,7 @@ npm run test:e2e
     - [x] install Parcel
     - [x] e2e test: main page content
     - [x] automation
-    - [ ] e2e test: save the default layout as json
+    - [x] e2e test: save the default layout as json
     - [ ] e2e test: export the default layout as binary
 - [ ] CI and git hooks
 - [ ] implement the [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) coding workflow

@@ -33,4 +33,13 @@ describe('the vortex core default layout', () => {
     it('displays a byte counter set at 384', () => {
         cy.get('.memory-limit span').contains('384/8192 Bytes')
     })
+
+    it('can download the default layout as text file', () => {
+        cy.get('#main-actions button.save-json').click()
+        cy.readFile('tests/output/cypress-downloads/export.txt').then((textExport) => {
+            cy.fixture('./export.txt').then((fixture) => {
+                expect(textExport).to.equal(fixture)
+            })
+        })
+    })
 })
