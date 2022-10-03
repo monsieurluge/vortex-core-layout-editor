@@ -57,11 +57,11 @@
                 </div>
             </nav>
 
-            <div class="uk-padding-small uk-text-right">
-                <button class="uk-button-small uk-button-default uk-box-shadow-small" @click="openFile(importFile)">Load JSON</button>
-                <button class="uk-button-small uk-button-default uk-box-shadow-small" @click="exportFile()">Save JSON</button>
-                <button class="uk-button-small uk-button-primary uk-box-shadow-small" @click="generateOld()" uk-tooltip="The binary generation code directly from Vortexgear">Generate Binary (Vortex)</button>
-                <button class="uk-button-small uk-button-primary uk-box-shadow-small" @click="generate()" uk-tooltip="My custom solution, might fix some problems">Generate Binary (Custom)</button>
+            <div id="main-actions" class="uk-padding-small uk-text-right">
+                <button class="main-action load-json uk-button-small uk-button-default uk-box-shadow-small" @click="openFile(importFile)">Load JSON</button>
+                <button class="main-action save-json uk-button-small uk-button-default uk-box-shadow-small" @click="exportFile()">Save JSON</button>
+                <button class="main-action generate-vortexgear-binary uk-button-small uk-button-primary uk-box-shadow-small" @click="generateOld()" uk-tooltip="The binary generation code directly from Vortexgear">Generate Binary (Vortex)</button>
+                <button class="main-action generate-custom-binary uk-button-small uk-button-primary uk-box-shadow-small" @click="generate()" uk-tooltip="My custom solution, might fix some problems">Generate Binary (Custom)</button>
             </div>
 
             <div id="container" class="uk-padding uk-padding-remove-top">
