@@ -5,12 +5,10 @@
     <title>Much Programming Core</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/css/uikit.min.css" />
-    <link rel="stylesheet" href="css/muchpc.css?3.0" />
+    <link rel="stylesheet" type="text/css" href="css/fa-solid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/muchpc.css" />
+    <link rel="stylesheet" type="text/css" href="css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit-icons.min.js"></script>
@@ -18,7 +16,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.15.0/vuedraggable.min.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-
 </head>
 
 <body>
@@ -27,12 +24,12 @@
             <nav class="uk-navbar-container uk-box-shadow-medium" uk-navbar>
                 <div class="uk-navbar-left">
                     <a class="uk-navbar-item uk-logo">TsFreddie's MPC</a>
-                    <!-- <span>Locale <i class="fas fa-question-circle" uk-tooltip="Determines how keys are displayed. Won't affect keycode assigned."></i> :</span>
+                    <!-- <span>Locale <i class="fa-solid fa-question-circle" uk-tooltip="Determines how keys are displayed. Won't affect keycode assigned."></i> :</span>
                     <div class="key-form-custom" uk-form-custom style="margin-left: 5px;">
                         <select class="uk-select uk-form-width-medium" v-model="locale" @change="(e) => {changeLocale(e.target.value);}">
                             <option v-for="(locale, key) in keyLocales" v-bind:value="key">{{ locale.name }}</option>
                         </select>
-           
+
                         <button class="uk-button uk-button-default" type="button" tabindex="-1">
                             <span>{{ keyLocales[locale].name }}</span>
                             <span uk-icon="icon: chevron-down"></span>
@@ -83,11 +80,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="uk-column-1-2 uk-margin">
                     <div class="macro-limit">
                         <span>Macro Limit </span>
-                        <span><i class="fas fa-question-circle" uk-tooltip="MPC firmware has a hard limit of 20 macros per profile."></i></span>
+                        <span><i class="fa-solid fa-question-circle" uk-tooltip="MPC firmware has a hard limit of 20 macros per profile."></i></span>
                         <span>:</span>
                         <span>{{currentProfileNumMacro}}/20</span>
                         <progress class="uk-progress" :value="currentProfileNumMacro" max="20" :class="{'progress-danger': currentProfileNumMacro > 20}"></progress>
@@ -95,15 +92,15 @@
 
                     <div class="memory-limit">
                         <span>Memory Usage </span>
-                        <span><i class="fas fa-question-circle" uk-tooltip="Preferred binary size is 8KB"></i></span>
+                        <span><i class="fa-solid fa-question-circle" uk-tooltip="Preferred binary size is 8KB"></i></span>
                         <span>:</span>
                         <span>{{memoryUsage}}/8192 Bytes</span>
                         <progress class="uk-progress" :value="memoryUsage" max="8192" :class="{'progress-danger': memoryUsage > 8192}"></progress>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <div v-if="currentProfileNumMacro > 20" class="uk-alert-danger" uk-alert>
                     <b>Macro limit excceded!</b> You can safely apply the layout, but not all of your macros are guaranteed to work.
                 </div>
@@ -112,7 +109,7 @@
                 </div>
 
                 <ul id="tabs" uk-tab>
-                    <li><a><i class="fas fa-info-circle"></i></a></li>
+                    <li><a><i class="fa-solid fa-info-circle"></i></a></li>
                     <li><a>Macros</a></li>
                     <li><a>Key Settings</a></li>
                     <li><a>Toolbox</a></li>
@@ -276,7 +273,7 @@
                             </li>
                             <li>
                                 <a class="uk-link-heading" uk-toggle="target: #faq-blub; animation: uk-animation-fade">What
-                                    is <i class="fas fa-lightbulb"></i> ?</a>
+                                    is <i class="fa-solid fa-lightbulb"></i> ?</a>
                                 <div id="faq-blub" class="uk-padding-small" hidden>
                                     <p>
                                         Believe or not, Vortex CORE MPC firmware do have RGB control.
@@ -284,7 +281,7 @@
                                         both version share the same firmware.
                                     </p>
                                     <p>
-                                        So the <i class="fas fa-lightbulb"></i> icon indicates there is a RGB control
+                                        So the <i class="fa-solid fa-lightbulb"></i> icon indicates there is a RGB control
                                         function mapped to that key in Pn layer. You probably won't need them if you
                                         have a regular CORE. In that case, you can unmap all RGB control in the
                                         toolbox.
@@ -323,19 +320,19 @@
                     <li>
                         <div class="uk-child-width-1-2" uk-grid>
                             <div>
-                                <button class="uk-button uk-button-small uk-button-primary" @click="newMacro()"><i class="fas fa-plus"></i> New</button>
+                                <button class="uk-button uk-button-small uk-button-primary" @click="newMacro()"><i class="fa-solid fa-plus"></i> New</button>
                                 <button class="uk-button uk-button-small uk-button-default" uk-tooltip="Import macros from JSON file."
                                 @click="openFile(importMacros)"><i class="far fa-file"></i> Import</button>
                             </div>
                             <div>
                                 <span class="uk-align-right uk-text-meta">You can bind macros in Key Settings.</span>
-                            </div>                     
+                            </div>
                         </div>
                         <div class="uk-child-width-1-4" uk-grid>
                             <div v-for="(macro, index) in macros">
                                 <div class="uk-card uk-card-small uk-card-default uk-card-body uk-visible-toggle">
                                     <div class="uk-text-meta">
-                                        <i class="fas fa-sync-alt"></i>
+                                        <i class="fa-solid fa-sync-alt"></i>
                                         <span v-if="macro.type == 1">Once</span>
                                         <span v-if="macro.type == 2">Until release</span>
                                         <span v-if="macro.type == 3">Toggle</span>
@@ -343,7 +340,7 @@
                                     </div>
                                     <div class="macro-title uk-text-lead">{{ macro.title }}</div>
                                     <ul class="uk-iconnav uk-position-top-right uk-invisible-hover">
-                                        <li><a @click="editMacro(index)"><i class="fas fa-pen-square uk-text-large uk-text-primary"></i></a></li>
+                                        <li><a @click="editMacro(index)"><i class="fa-solid fa-pen-square uk-text-large uk-text-primary"></i></a></li>
                                     </ul>
                                     <div>
                                         <div v-for="code in previewMacro(macro).slice(0,6)"
@@ -398,7 +395,7 @@
                             <span v-if="this.selected_key_layer" :class='currentKeyLayerColor'>{{currentKeyLayerPrefix}}</span>
                             <span v-if="this.selected_key_layer"> + </span>
                             <span v-html="'[ ' + keyDef[currentKeyCode].legend + ' ]'"></span>
-                            <span style="color: #888888"><i class="fas fa-long-arrow-alt-right"></i></span>
+                            <span style="color: #888888"><i class="fa-solid fa-long-arrow-alt-right"></i></span>
                             <span>{{ keyDef[binding_key].name }}</span>
                         </span>
                     </div>
@@ -426,7 +423,7 @@
                             <span v-if="this.selected_key_layer" :class='currentKeyLayerColor'>{{currentKeyLayerPrefix}}</span>
                             <span v-if="this.selected_key_layer"> + </span>
                             <span v-html="'[ ' + keyDef[currentKeyCode].legend + ' ]'"></span>
-                            <span style="color: #888888"><i class="fas fa-long-arrow-alt-right"></i></span>
+                            <span style="color: #888888"><i class="fa-solid fa-long-arrow-alt-right"></i></span>
                             <span>{{ keyDef[binding_key].name }}</span>
                         </span>
                     </div>
@@ -478,7 +475,7 @@
                         <div class="macro-selection-border uk-box-shadow-medium uk-box-shadow-hover-large uk-padding-small"
                             @click="newMacro(true)">
                             <div class="uk-text-meta">
-                                <i class="fas fa-plus"></i>
+                                <i class="fa-solid fa-plus"></i>
                                 <span>Create</span>
                             </div>
                             <div class="macro-title uk-text-lead">New Macro</div>
@@ -489,7 +486,7 @@
                             :class="{'uk-card-primary':binding_key == 'Macro' && binding_macro == macro.id }"
                             @click="binding_key = 'Macro'; binding_macro = macro.id">
                             <div class="uk-text-meta">
-                                <i class="fas fa-sync-alt"></i>
+                                <i class="fa-solid fa-sync-alt"></i>
                                 <span v-if="macro.type == 1">Once</span>
                                 <span v-if="macro.type == 2">Until release</span>
                                 <span v-if="macro.type == 3">Toggle</span>
@@ -512,7 +509,7 @@
                     <button class="uk-button uk-button-primary" @click="confirmBind()">Confirm</button>
                     <button class="uk-button uk-button-secondary" :disabled="binding_key==currentKeyDefault" @click="binding_key=currentKeyDefault">Default</button>
                     <button class="uk-button uk-button-default uk-modal-close">Cancel</button>
-                    
+
                     <div class="uk-align-right">
 
                         <div v-if="isUnbindable(currentKeyDefault)" class="key-border key small fk-1x1" :class="{selected: binding_key == currentKeyDefault}"
@@ -528,16 +525,16 @@
                             <select class="uk-select uk-form-width-medium" v-model="binding_key">
                                 <option v-for="key in hiddenKeyCode" v-bind:value="key">0x{{key}}: {{ keyDef[key].name }}</option>
                             </select>
-               
+
                             <div class="key-border key small fk-1x1" :class="{selected: hiddenKeyCode.indexOf(binding_key) >= 0}">
                                 <div class="key-container">
                                     <div class="key-legend-main">
-                                        <span><i class="fas fa-flask"></i></span>
+                                        <span><i class="fa-solid fa-flask"></i></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
@@ -589,10 +586,10 @@
                             <div class="macro-event uk-visible-toggle" :class="{down: event.event == 1, up: event.event == 0}">
                                 <div class="key-container" style="width: 12mm">
                                     <div class="key-legend-main" v-html="keyDef[event.code].legend"></div>
-            
-                                    <a class="uk-invisible-hover uk-text-danger" @click="removeEvent(index)"><i class="fas fa-minus-circle"></i></a>
+
+                                    <a class="uk-invisible-hover uk-text-danger" @click="removeEvent(index)"><i class="fa-solid fa-minus-circle"></i></a>
                                     <span style="margin-left: 9px">
-                                        <i v-if="event.event == 1" class="fas fa-caret-square-down"></i>
+                                        <i v-if="event.event == 1" class="fa-solid fa-caret-square-down"></i>
                                         <i v-if="event.event == 0" class="far fa-caret-square-up"></i>
                                     </span>
                                 </div>
@@ -623,11 +620,11 @@
                                 <select class="uk-select uk-form-width-medium" @change="(e) => {newEvent(e.target.value); e.target.value = null;}">
                                     <option v-for="key in hiddenKeyCode" v-bind:value="key" :selected='false'>0x{{key}}: {{ keyDef[key].name }}</option>
                                 </select>
-                                
+
                                 <div class="key-border key small fk-1x1">
                                     <div class="key-container">
                                         <div class="key-legend-main">
-                                            <span><i class="fas fa-flask"></i></span>
+                                            <span><i class="fa-solid fa-flask"></i></span>
                                         </div>
                                     </div>
                                 </div>

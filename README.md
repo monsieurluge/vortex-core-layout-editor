@@ -33,6 +33,8 @@ npm run test:e2e
     - [ ] e2e test: export the default layout as binary
 - [ ] CI and git hooks
 - [ ] implement the [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) coding workflow
+- [x] import the css files
+- [ ] import the script files
 - [ ] reduce the _js/muchpc.js_ file complexity
     - [ ] move the constants to dedicated files
     - [ ] move the methods to dedicated files
