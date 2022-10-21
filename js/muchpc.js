@@ -1,3 +1,9 @@
+import Icons from 'uikit/dist/js/uikit-icons'
+import UIkit from 'uikit'
+import Vue from 'vue/dist/vue'
+
+UIkit.use(Icons)
+
 Vue.directive('sortable', function (value) {
     var that = this,
         key = this.arg;
@@ -484,11 +490,6 @@ const fullKeyboard = [
     ],
 ];
 
-const visibleKeyCode = fullKeyboard.reduce((p, r) => p.concat(r.map((v) => v.code)), []);
-const hiddenKeyCode = Object.keys(keyDef)
-    .filter((v) => unavaliabe_keys.indexOf(v) < 0 && visibleKeyCode.indexOf(v) < 0)
-    .sort((a, b) => a.length - b.length || a.localeCompare(b));
-
 // -----------------------
 //  Templates
 // -----------------------
@@ -683,6 +684,14 @@ var app = new Vue({
         advanced: false,
     },
     computed: {
+        visibleKeyCode: function() {
+            return fullKeyboard.reduce((p, r) => p.concat(r.map((v) => v.code)), [])
+        },
+        hiddenKeyCode: function() {
+            return Object.keys(keyDef)
+                .filter((v) => unavaliabe_keys.indexOf(v) < 0 && this.visibleKeyCode.indexOf(v) < 0)
+                .sort((a, b) => a.length - b.length || a.localeCompare(b))
+        },
         ledClass: function () {
             return {
                 'led-red': this.active_profile == 1,
