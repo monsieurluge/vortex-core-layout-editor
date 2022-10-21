@@ -1,6 +1,8 @@
-import Icons from 'uikit/dist/js/uikit-icons'
+import Sortable from 'sortablejs'
 import UIkit from 'uikit'
+import Icons from 'uikit/dist/js/uikit-icons'
 import Vue from 'vue/dist/vue'
+import draggable from 'vuedraggable'
 
 UIkit.use(Icons)
 
@@ -639,6 +641,9 @@ function defaultRows() {
 // -----------------------
 var app = new Vue({
     el: '#app',
+    components: {
+        draggable,
+    },
     created: function () {
         window.addEventListener('beforeunload', function (e) {
             e.preventDefault();
