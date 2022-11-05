@@ -1,3 +1,5 @@
+import exportFixture from '../fixtures/export.json'
+
 describe('the vortex core default layout', () => {
     it('is displayed as the main view', () => {
         cy.visit('/')
@@ -34,12 +36,11 @@ describe('the vortex core default layout', () => {
         cy.get('.memory-limit span').contains('384/8192 Bytes')
     })
 
-    it('can download the default layout as text file', () => {
+    it('can be exported as text file', () => {
         cy.get('#main-actions button.save-json').click()
-        cy.readFile('tests/output/cypress-downloads/export.txt').then((textExport) => {
-            cy.fixture('./export.txt').then((fixture) => {
-                expect(textExport).to.equal(fixture)
-            })
+        cy.readFile('tests/output/cypress-downloads/export.txt').then((exportedFile) => {
+            const exported = JSON.parse(exportedFile)
+            assert.deepEqual(exported, exportFixture)
         })
     })
 })
