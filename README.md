@@ -24,13 +24,13 @@ npm run test:e2e
 
 - [x] documentation cleaning
 - [x] project initialization using npm
-- [ ] setup the testing environment
+- [x] setup the testing environment
     - [x] install Cypress
     - [x] install Parcel
     - [x] e2e test: main page content
     - [x] automation
     - [x] e2e test: save the default layout as json
-    - [ ] e2e test: export the default layout as binary
+    - [x] e2e test: export the default layout as binary
 - [ ] CI and git hooks
 - [ ] implement the [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) coding workflow
 - [x] import the css files

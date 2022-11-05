@@ -43,4 +43,13 @@ describe('the vortex core default layout', () => {
             assert.deepEqual(exported, exportFixture)
         })
     })
+
+    it('can be exported as binary file', () => {
+        cy.get('#main-actions button.generate-custom-binary').click()
+        cy.readFile('tests/output/cypress-downloads/layout.cys').then((binaryExport) => {
+            cy.fixture('./layout.cys').then((fixture) => {
+                expect(binaryExport).to.equal(fixture)
+            })
+        })
+    })
 })
