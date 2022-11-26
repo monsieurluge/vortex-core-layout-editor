@@ -1,4 +1,4 @@
-import exportFixture from '../fixtures/export.json'
+import exportFixture from '../fixtures/default-export.json'
 
 describe('the vortex core default layout', () => {
     it('is displayed as the main view', () => {
