@@ -1,6 +1,6 @@
 import exportFixture from '../fixtures/default-export.json'
 
-describe('the vortex core default layout #0', () => {
+describe('the vortex core default configuration', () => {
     before(() => {
         cy.visit('/')
     })
@@ -22,11 +22,26 @@ describe('the vortex core default layout #0', () => {
         })
     })
 
-    it('displays a macro counter set at 0 (no macro))', () => {
+    it('displays the right values for macro and byte counters, on layout #0', () => {
         cy.get('.macro-limit span').contains('0/20')
+        cy.get('.memory-limit span').contains('384/8192 Bytes')
     })
 
-    it('displays a byte counter set at 384', () => {
+    it('displays the right values for macro and byte counters, on layout #1', () => {
+        cy.get('.button__layout1').click()
+        cy.get('.macro-limit span').contains('0/20')
+        cy.get('.memory-limit span').contains('384/8192 Bytes')
+    })
+
+    it('displays the right values for macro and byte counters, on layout #2', () => {
+        cy.get('.button__layout2').click()
+        cy.get('.macro-limit span').contains('0/20')
+        cy.get('.memory-limit span').contains('384/8192 Bytes')
+    })
+
+    it('displays the right values for macro and byte counters, on layout #3', () => {
+        cy.get('.button__layout3').click()
+        cy.get('.macro-limit span').contains('0/20')
         cy.get('.memory-limit span').contains('384/8192 Bytes')
     })
 })
