@@ -20,9 +20,13 @@ describe('the vortex core editor UI', () => {
     })
 
     it('shows a profile selector containing 4 layout buttons', () => {
-        cy.get('nav a').contains('L0')
-        cy.get('nav a').contains('L1')
-        cy.get('nav a').contains('L2')
-        cy.get('nav a').contains('L3')
+        cy.get('.button__layout0').contains('L0')
+        cy.get('.button__layout1').contains('L1')
+        cy.get('.button__layout2').contains('L2')
+        cy.get('.button__layout3').contains('L3')
+    })
+
+    it('sets the L0 layout as the active one', () => {
+        cy.get('.button__layout0').should('have.class', 'uk-active')
     })
 })
