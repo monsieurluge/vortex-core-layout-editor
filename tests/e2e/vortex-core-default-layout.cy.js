@@ -1,6 +1,6 @@
 import exportFixture from '../fixtures/default-export.json'
 
-describe('the vortex core default layout', () => {
+describe('the vortex core default layout #0', () => {
     before(() => {
         cy.visit('/')
     })

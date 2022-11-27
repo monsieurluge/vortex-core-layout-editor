@@ -29,4 +29,22 @@ describe('the vortex core editor UI', () => {
     it('sets the L0 layout as the active one', () => {
         cy.get('.button__layout0').should('have.class', 'uk-active')
     })
+
+    it('allows to switch to the L1 layout', () => {
+        cy.get('.button__layout1').click()
+        cy.get('.button__layout1').should('have.class', 'uk-active')
+
+    })
+
+    it('allows to switch to the L2 layout', () => {
+        cy.get('.button__layout2').click()
+        cy.get('.button__layout2').should('have.class', 'uk-active')
+
+    })
+
+    it('allows to switch to the L3 layout', () => {
+        cy.get('.button__layout3').click()
+        cy.get('.button__layout3').should('have.class', 'uk-active')
+
+    })
 })
