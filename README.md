@@ -31,6 +31,9 @@ npm run test:e2e
     - [x] automation
     - [x] e2e test: save the default layout as json
     - [x] e2e test: export the default layout as binary
+    - [ ] e2e test: load a custom layout
+    - [ ] e2e test: save a custom layout as json
+    - [ ] e2e test: export a custom layout as binary
 - [ ] CI and git hooks
 - [ ] implement the [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) coding workflow
 - [x] import the css files
