@@ -5,14 +5,6 @@ describe('the vortex core default layout', () => {
         cy.visit('/')
     })
 
-    it('displays a macro counter set at 0 (no macro))', () => {
-        cy.get('.macro-limit span').contains('0/20')
-    })
-
-    it('displays a byte counter set at 384', () => {
-        cy.get('.memory-limit span').contains('384/8192 Bytes')
-    })
-
     it('can be exported as text file', () => {
         cy.get('#main-actions button.save-json').click()
         cy.readFile('tests/output/cypress-downloads/export.txt').then((exportedFile) => {
@@ -28,5 +20,13 @@ describe('the vortex core default layout', () => {
                 expect(binaryExport).to.equal(fixture)
             })
         })
+    })
+
+    it('displays a macro counter set at 0 (no macro))', () => {
+        cy.get('.macro-limit span').contains('0/20')
+    })
+
+    it('displays a byte counter set at 384', () => {
+        cy.get('.memory-limit span').contains('384/8192 Bytes')
     })
 })
